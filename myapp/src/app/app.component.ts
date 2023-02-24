@@ -22,12 +22,36 @@ export class AppComponent {
 
 
 
-     this.fakeService.UpdatePut({id:1, title:'title 1',body:'body 1', userId:2}).subscribe({
-      next:(data)=>console.log(data),
-      error:(err)=> console.log(err.message),
-      complete:()=>console.log("tamamalandı.")
-      
-      })
+// this.fakeService.getParallelWithForkJoinOperator().subscribe(x=>console.log(x.posts))
+
+
+this.fakeService.getPostsWithTodo(1).subscribe(x=>{
+  console.log(x)
+})
+
+
+
+// this.fakeService.getPostsWithUserId(1).subscribe(x=>{
+//   console.log(x)
+// })
+
+
+
+// this.fakeService.getParallelRequest().postObservable.subscribe(x=>console.log(x))
+
+// this.fakeService.getParallelRequest().userObservable.subscribe(x=>console.log(x))
+
+// this.fakeService.deletePost(1).subscribe(x=>{
+//   console.log(x);
+// })
+
+
+    //  this.fakeService.UpdatePut({id:1, title:'title 1',body:'body 1', userId:2}).subscribe({
+    //   next:(data)=>console.log(data),
+    //   error:(err)=> console.log(err.message),
+    //   complete:()=>console.log("tamamalandı.")
+
+    //   })
 
 
 // this.fakeService.SavePostWithError({id:1, title:'title 1',body:'body 1', userId:2}).subscribe({
@@ -51,7 +75,7 @@ export class AppComponent {
 
 
 
-    // Filter operator 
+    // Filter operator
     //First operator
 
     // var fromOperator = from([10, 20, 30, 40, 50, 60, 70]);
